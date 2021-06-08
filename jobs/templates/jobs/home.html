@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio</title>
+    {% load static %}
+    <title>Karthik MP</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     
@@ -31,21 +32,22 @@
   <body>
     
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Karthik M P</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Linkedln</a>
-        <a class="nav-link" href="#">Contact</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}">Karthik M P</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="{% static 'infographic resume v2 25-05.pdf' %}">Resume</a>
+          <a class="nav-link" href="http://www.linkedin.com/in/Karthik-MP">Linkedln</a>
+          <a class="nav-link" href="{% url 'allBlogs' %}">Blog</a>
+          <a class="nav-link" href="#">Contact</a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 </header>
 
 <main>
@@ -53,6 +55,7 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
+        <img src="{% static 'pp.jpeg' %}" style="border-radius: 50%; width: 20%;">
         <h1 class="fw-light">Karthik M P</h1>
         <p class="lead text-muted">Full Stack Web Developer.</p>
         <p>
